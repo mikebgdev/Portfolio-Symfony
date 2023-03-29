@@ -45,5 +45,5 @@ jobs:
     - name: PHP Fixer
       run: vendor/bin/php-cs-fixer fix --verbose --diff --no-interaction
     
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
+    - name: Execute PHPUnit tests
       run: vendor/bin/phpunit tests
