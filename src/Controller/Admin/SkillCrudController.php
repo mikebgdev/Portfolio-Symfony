@@ -1,4 +1,10 @@
 <?php
+/*
+ * This class is part of a software application developed by Michael Ballester Granero.
+ *
+ * The application is distributed under the terms of the MIT License.
+ * For more information, please see the LICENSE file included in the source code.
+ */
 
 namespace App\Controller\Admin;
 
@@ -22,8 +28,8 @@ class SkillCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Skill')
             ->setEntityLabelInPlural('Skills')
             ->setPageTitle('index', '%entity_label_plural% listing')
-            ->setPageTitle('detail', fn(Skill $skill) => $skill->getName())
-            ->setPageTitle('edit', fn(Skill $skill) => sprintf('Editing <b>%s</b>', $skill->getName()))
+            ->setPageTitle('detail', fn (Skill $skill) => $skill->getName())
+            ->setPageTitle('edit', fn (Skill $skill) => \sprintf('Editing <b>%s</b>', $skill->getName()))
             ->setSearchFields(['name'])
             ->setDefaultSort(['id' => 'DESC']);
     }
@@ -34,12 +40,11 @@ class SkillCrudController extends AbstractCrudController
         yield ChoiceField::new('type')
             ->renderExpanded()
             ->setChoices([
-            'Soft Skill' => 'soft',
-            'Programmer Skill' => 'warning'
-        ]);
+                'Soft Skill' => 'soft',
+                'Programmer Skill' => 'warning',
+            ]);
         yield ImageField::new('icon')
             ->setBasePath('skills/')
             ->setUploadDir('public/skills/');
-
     }
 }

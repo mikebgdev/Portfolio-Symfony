@@ -1,4 +1,10 @@
 <?php
+/*
+ * This class is part of a software application developed by Michael Ballester Granero.
+ *
+ * The application is distributed under the terms of the MIT License.
+ * For more information, please see the LICENSE file included in the source code.
+ */
 
 namespace App\Controller\Admin;
 
@@ -23,8 +29,8 @@ class ProjectCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Project')
             ->setEntityLabelInPlural('Projects')
             ->setPageTitle('index', '%entity_label_plural% listing')
-            ->setPageTitle('detail', fn(Project $project) => (string)$project)
-            ->setPageTitle('edit', fn(Project $project) => sprintf('Editing <b>%s</b>', $project))
+            ->setPageTitle('detail', fn (Project $project) => (string) $project)
+            ->setPageTitle('edit', fn (Project $project) => \sprintf('Editing <b>%s</b>', $project))
             ->setSearchFields(['title', 'description'])
             ->setDefaultSort(['id' => 'DESC']);
     }
@@ -38,7 +44,5 @@ class ProjectCrudController extends AbstractCrudController
             ->setUploadDir('public/images/');
         yield UrlField::new('linkGitHub');
         yield UrlField::new('linkDemo');
-
     }
-
 }

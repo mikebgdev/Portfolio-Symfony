@@ -1,3 +1,14 @@
+index:
+    path: /{_locale}
+    controller: App\Controller\MainController::index
+    requirements:
+        _locale: '%app_locales%'
+    defaults:
+        _locale: '%locale%'
+contact:
+    path: /contact
+    controller: App\Controller\ContactController::contact
+
 dashboard:
     path: /admin
     controller: App\Controller\Admin\DashboardController::index
