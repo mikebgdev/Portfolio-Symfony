@@ -1,55 +1,68 @@
 <section id="contact" class="contact">
-    <div class="container my-5">
-        <div class="p-5 bg-body-tertiary rounded-3">
-            <h2 class="text-body-emphasis">{{ 'contact.h2'|trans }}</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    {{ form_start(form) }}
+  <div class="container">
+    <div class="p-mb-5 pe-3 ps-3 pb-5 pt-5">
+      <h2 class="text-body-emphasis">{{ 'contact.h2'|trans }}</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          {{ form_start(form) }}
 
-                    {% if form_errors((form)) %}
-                        <div class="alert alert-error">
-                            {{ form_errors(form) }}
-                        </div>
-                    {% endif %}
-
-                    <div class="form-floating mb-3">
-                        {{ form_widget(form.name, {'attr': {'class': 'form-control form-control-lg', 'id': 'name', 'placeholder': 'Nombre completo'}}) }}
-                        {{ form_label(form.name, 'Nombre completo', {'label_attr': {'for': 'name'}}) }}
-                        {{ form_errors(form.name) }}
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        {{ form_widget(form.email, {'attr': {'class': 'form-control form-control-lg', 'id': 'email', 'placeholder': 'Correo electrónico'}}) }}
-                        {{ form_label(form.email, 'Correo electrónico', {'label_attr': {'for': 'email'}}) }}
-                        {{ form_errors(form.email) }}
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        {{ form_widget(form.subject, {'attr': {'class': 'form-control form-control-lg', 'id': 'subject', 'placeholder': 'Correo electrónico'}}) }}
-                        {{ form_label(form.subject, 'Asunto', {'label_attr': {'for': 'subject'}}) }}
-                        {{ form_errors(form.subject) }}
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        {{ form_widget(form.message, {'attr': {'class': 'form-control form-control-lg', 'id': 'message', 'placeholder': 'Mensaje', 'style': 'height: 150px;'}}) }}
-                        {{ form_label(form.message, 'Mensaje', {'label_attr': {'for': 'message'}}) }}
-                        {{ form_errors(form.message) }}
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg mb-3">Enviar mensaje</button>
-
-                    {{ form_end(form) }}
-                </div>
-                <div class="col-lg-4 text-center">
-                    <h3 class="section-title mb-3">Redes sociales</h3>
-                    <a href="https://github.com/mikebgdev" class="social-icon me-3 "><i
-                                class="fa-brands fa-github fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/in/michaelballester/" class="social-icon me-3"><i
-                                class="fa-brands fa-linkedin fa-2x"></i></a>
-                    <a href="https://www.instagram.com/mikebg_dev" class="social-icon"><i
-                                class="fa-brands fa-instagram fa-2x"></i></a>
-                </div>
+          {% if form_errors((form)) %}
+            <div class="alert alert-error">
+              {{ form_errors(form) }}
             </div>
+          {% endif %}
+
+          <div class="form-floating mb-3">
+            {{ form_widget(form.name, {'attr': {'class': 'form-control form-control-lg', 'id': 'name', 'placeholder': 'Nombre completo'}}) }}
+            {{ form_label(form.name, 'Nombre completo', {'label_attr': {'for': 'name'}}) }}
+            {{ form_errors(form.name) }}
+          </div>
+
+          <div class="form-floating mb-3">
+            {{ form_widget(form.email, {'attr': {'class': 'form-control form-control-lg', 'id': 'email', 'placeholder': 'Correo electrónico'}}) }}
+            {{ form_label(form.email, 'Correo electrónico', {'label_attr': {'for': 'email'}}) }}
+            {{ form_errors(form.email) }}
+          </div>
+
+          <div class="form-floating mb-3">
+            {{ form_widget(form.subject, {'attr': {'class': 'form-control form-control-lg', 'id': 'subject', 'placeholder': 'Correo electrónico'}}) }}
+            {{ form_label(form.subject, 'Asunto', {'label_attr': {'for': 'subject'}}) }}
+            {{ form_errors(form.subject) }}
+          </div>
+
+          <div class="form-floating mb-3">
+            {{ form_widget(form.message, {'attr': {'class': 'form-control form-control-lg', 'id': 'message', 'placeholder': 'Mensaje', 'style': 'height: 150px;'}}) }}
+            {{ form_label(form.message, 'Mensaje', {'label_attr': {'for': 'message'}}) }}
+            {{ form_errors(form.message) }}
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg mb-3">Enviar mensaje</button>
+
+          {{ form_end(form) }}
         </div>
+
+        <div class="col-lg-4 text-center">
+          <h3 class="section-title mb-3">Redes sociales</h3>
+          <a href="https://github.com/mikebgdev" class="social-icon me-3" target="_blank" title="GitHub">
+            <svg width="32" height="32">
+              <use xlink:href="#github"></use>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/michaelballester/" class="social-icon me-3" target="_blank"
+             title="Linkedin">
+            <svg width="32" height="32">
+              <use xlink:href="#linkedin"></use>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/mikebg_dev" class="social-icon" target="_blank" title="Instagram">
+            <svg width="32" height="32">
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
