@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-utilities.min.css';
 
-import './styles/app.css';
+import './styles/app.scss';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Typed from 'typed.js';
@@ -39,6 +39,7 @@ import Typed from 'typed.js';
       }
     }
   }
+
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -64,7 +65,9 @@ import Typed from 'typed.js';
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
+
   const navbarlinks = select('.navbar .scrollto', true);
+
   const navbarlinksActive = () => {
     let position = window.scrollY + 250
     navbarlinks.forEach(navbarlink => {
@@ -78,10 +81,11 @@ import Typed from 'typed.js';
       }
     })
   }
+
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
-  const backtotop = select('.back-to-top')
+  let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {

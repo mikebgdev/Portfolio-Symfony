@@ -1,16 +1,9 @@
-#file: noinspection YAMLSchemaValidation
-meta.title: "Michael Ballester Granero Portfolio"
-meta.description: ""
-meta.keywords: "portfolio, software developer, mikebg, mikebg_dev"
-meta.author: "mikebg_dev"
-
-img.alt: "mikebg_dev"
-
 header.home: "Inicio"
 header.about: "Sobre Mi"
 header.skills: "Habilidades"
 header.portfolio: "Portfolio"
 header.contact: "Contacto"
+header.switch: "Cambiar tema"
 
 hero.h6: "Hola, soy"
 hero.h2: "Soy"
@@ -18,9 +11,23 @@ hero.h2.items: "Software Developer, Web Developer"
 
 
 about.h2: "Acerca de mi"
-skills.h2: "Habilidades"
+about.contact: "Contáctame"
+
+skills.h2: "Habilidades Hard"
+
+skills.soft.h2: "Habilidades Soft"
+
 portfolio.h2: "Portfolio"
+
 contact.h2: "Contacto"
+contact.form.name: 'Nombre Completo'
+contact.form.email: 'Correo electrónico'
+contact.form.subject: 'Asunto'
+contact.form.message: 'Mensaje'
+contact.form.send: 'Enviar mensaje'
+contact.social: 'Redes sociales'
 
 footer.copyrights: "Todos los derechos reservados."
 footer.designed: "Diseñado y desarrollado por"
+
+uparrow: "Volver arriba"

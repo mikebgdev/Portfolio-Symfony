@@ -13,54 +13,54 @@
           {% endif %}
 
           <div class="form-floating mb-3">
-            {{ form_widget(form.name, {'attr': {'class': 'form-control form-control-lg', 'id': 'name', 'placeholder': 'Nombre completo'}}) }}
-            {{ form_label(form.name, 'Nombre completo', {'label_attr': {'for': 'name'}}) }}
+            {{ form_widget(form.name, {'attr': {'class': 'form-control form-control-lg', 'id': 'name', 'placeholder': 'contact.form.name'|trans}}) }}
+            {{ form_label(form.name, 'contact.form.name'|trans, {'label_attr': {'for': 'name'}}) }}
             {{ form_errors(form.name) }}
           </div>
 
           <div class="form-floating mb-3">
-            {{ form_widget(form.email, {'attr': {'class': 'form-control form-control-lg', 'id': 'email', 'placeholder': 'Correo electrónico'}}) }}
-            {{ form_label(form.email, 'Correo electrónico', {'label_attr': {'for': 'email'}}) }}
+            {{ form_widget(form.email, {'attr': {'class': 'form-control form-control-lg', 'id': 'email', 'placeholder': 'contact.form.email'|trans}}) }}
+            {{ form_label(form.email, 'contact.form.email'|trans, {'label_attr': {'for': 'email'}}) }}
             {{ form_errors(form.email) }}
           </div>
 
           <div class="form-floating mb-3">
-            {{ form_widget(form.subject, {'attr': {'class': 'form-control form-control-lg', 'id': 'subject', 'placeholder': 'Correo electrónico'}}) }}
-            {{ form_label(form.subject, 'Asunto', {'label_attr': {'for': 'subject'}}) }}
+            {{ form_widget(form.subject, {'attr': {'class': 'form-control form-control-lg', 'id': 'subject', 'placeholder': 'contact.form.subject'|trans}}) }}
+            {{ form_label(form.subject, 'contact.form.subject'|trans, {'label_attr': {'for': 'subject'}}) }}
             {{ form_errors(form.subject) }}
           </div>
 
           <div class="form-floating mb-3">
-            {{ form_widget(form.message, {'attr': {'class': 'form-control form-control-lg', 'id': 'message', 'placeholder': 'Mensaje', 'style': 'height: 150px;'}}) }}
-            {{ form_label(form.message, 'Mensaje', {'label_attr': {'for': 'message'}}) }}
+            {{ form_widget(form.message, {'attr': {'class': 'form-control form-control-lg', 'id': 'message', 'placeholder': 'contact.form.message'|trans, 'style': 'height: 150px;'}}) }}
+            {{ form_label(form.message, 'contact.form.message'|trans, {'label_attr': {'for': 'message'}}) }}
             {{ form_errors(form.message) }}
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg mb-3">Enviar mensaje</button>
+          <button type="submit" class="btn btn-primary btn-lg mb-3">{{ 'contact.form.send'|trans }}</button>
 
           {{ form_end(form) }}
         </div>
 
         <div class="col-lg-4 text-center">
-          <h3 class="section-title mb-3">Redes sociales</h3>
-          <a href="https://github.com/mikebgdev" class="social-icon me-3" target="_blank" title="GitHub">
-            <svg width="32" height="32">
+          <h3 class="section-title mb-3">{{ 'contact.social'|trans }}</h3>
+          <svg width="32" height="32" class="me-3">
+            <a href="https://github.com/mikebgdev" class="social-icon" target="_blank" title="GitHub">
               <use xlink:href="#github"></use>
-            </svg>
-          </a>
+            </a>
+          </svg>
 
-          <a href="https://www.linkedin.com/in/michaelballester/" class="social-icon me-3" target="_blank"
-             title="Linkedin">
-            <svg width="32" height="32">
+          <svg width="32" height="32" class="me-3">
+            <a href="https://www.linkedin.com/in/michaelballester/" class="social-icon" target="_blank"
+               title="Linkedin">
               <use xlink:href="#linkedin"></use>
-            </svg>
-          </a>
+            </a>
+          </svg>
 
-          <a href="https://www.instagram.com/mikebg_dev" class="social-icon" target="_blank" title="Instagram">
-            <svg width="32" height="32">
+          <svg width="32" height="32">
+            <a href="https://www.instagram.com/mikebg_dev" class="social-icon" target="_blank" title="Instagram">
               <use xlink:href="#instagram"></use>
-            </svg>
-          </a>
+            </a>
+          </svg>
         </div>
       </div>
     </div>
