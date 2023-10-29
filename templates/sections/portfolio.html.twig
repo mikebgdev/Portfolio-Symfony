@@ -1,7 +1,89 @@
-<section id="portfolio" class="portfolio">
-    <div class="container my-5">
-        <div class="p-5 bg-body-tertiary rounded-3">
-            <h2 class="text-body-emphasis">{{ 'portfolio.h2'|trans }}</h2>
+<section id="portfolio" class="portfolio bg-body-secondary">
+  <div class="container">
+    <div class="p-mb-5 pe-3 ps-3 pb-5 pt-5">
+      <h2 class="text-body-emphasis">{{ 'portfolio.h2'|trans }}</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/build/images/portfolio.png" width="100%" height="200px" alt="Portfolio Symfony">
+            <div class="card-body">
+              <h3>Portfolio Symfony</h3>
+              <p class="card-text">
+                Mi portfolio creado con el framework de Symfony
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="icon-group">
+
+                  <svg width="16" height="16">
+                    <use xlink:href="#symfony"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#bootstrap"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#npm"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#php"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#javascript"></use>
+                  </svg>
+                </div>
+
+                <div class="links-group">
+                  <a href="https://github.com/mikebgdev/Portfolio-Symfony" class="btn btn-primary">
+                    <svg width="16" height="16">
+                      <use xlink:href="#github"></use>
+                    </svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/build/images/docker.png" width="100%" height="200px" alt="Docker Symfony">
+            <div class="card-body">
+              <h3>Docker Symfony</h3>
+              <p class="card-text">
+                Configuracion docker para usar proyectos Symfony
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="icon-group">
+                  <svg width="16" height="16">
+                    <use xlink:href="#symfony"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#php"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#nginx"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#docker"></use>
+                  </svg>
+                </div>
+
+                <div class="links-group">
+                  <a href="https://github.com/mikebgdev/symfony-docker" class="btn btn-primary">
+                    <svg width="16" height="16">
+                      <use xlink:href="#github"></use>
+                    </svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 </section>

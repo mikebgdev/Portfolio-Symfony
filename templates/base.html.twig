@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.locale }}" data-bs-theme="dark">
+<html lang="{{ app.request.locale }}">
 <head>
 
   {% include 'includes/metas.html.twig' %}
@@ -14,28 +14,32 @@
 </head>
 <body>
 
-  {% include 'includes/header.html.twig' %}
+{% include 'includes/header.html.twig' %}
 
-  {% include 'includes/hero.html.twig' %}
+{% include 'includes/hero.html.twig' %}
 
-  <main id="main">
-    {% block main %}
+<main id="main">
+  {% block main %}
 
-      {% include 'sections/about.html.twig' %}
+    {% include 'sections/about.html.twig' %}
 
-      {% include 'sections/skills.html.twig' %}
+    {% include 'sections/skills.html.twig' %}
 
-      {% include 'sections/portfolio.html.twig' %}
+    {% include 'sections/portfolio.html.twig' %}
 
-      {% include 'sections/contact.html.twig' %}
+    {% include 'sections/contact.html.twig' %}
 
-    {% endblock %}
-  </main>
+  {% endblock %}
+</main>
 
-  {% include 'includes/footer.html.twig' %}
+{% include 'includes/footer.html.twig' %}
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="fa-solid fa-arrow-up"></i></a>
+<a class="back-to-top d-flex align-items-center justify-content-center" title="Volver arriba">
+  <svg width="24" height="24">
+    <use xlink:href="#uparrow"></use>
+  </svg>
+</a>
 
+{% include "includes/icons.html.twig" %}
 </body>
 </html>
