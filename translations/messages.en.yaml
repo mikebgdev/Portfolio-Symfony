@@ -1,0 +1,33 @@
+header.home: "Home"
+header.about: "About Me"
+header.skills: "Skills"
+header.portfolio: "Portfolio"
+header.contact: "Contact"
+header.switch: "Switch theme"
+
+hero.h6: "Hello, I am"
+hero.h2: "I am"
+hero.h2.items: "Software Developer, Web Developer"
+
+
+about.h2: "About me"
+about.contact: "Contact me"
+
+skills.h2: "Hard Skills"
+
+skills.soft.h2: "Soft Skills"
+
+portfolio.h2: "Portfolio"
+
+contact.h2: "Contact"
+contact.form.name: 'Full Name'
+contact.form.email: 'Email'
+contact.form.subject: 'Subject'
+contact.form.message: 'Message'
+contact.form.send: 'Send message'
+contact.social: 'Social networks'
+
+footer.copyrights: "All rights reserved."
+footer.designed: "Designed and developed by"
+
+uparrow: "Back up"
