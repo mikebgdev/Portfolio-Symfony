@@ -1,4 +1,12 @@
 <?php
+/*
+ * This class is part of a software application developed by Michael Ballester Granero.
+ *
+ * The application is distributed under the terms of the MIT License.
+ * For more information, please see the LICENSE file included in the source code.
+ */
+
+declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
@@ -8,7 +16,6 @@ use Doctrine\Persistence\ManagerRegistry;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
-use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\UX\Chartjs\Builder\ChartBuilderInterface;
 use Symfony\UX\Chartjs\Model\Chart;
@@ -27,7 +34,6 @@ class DashboardController extends AbstractDashboardController
         $this->doctrine = $doctrine;
     }
 
-
     public function index(): Response
     {
         $chart = $this->chartBuilder->createChart(Chart::TYPE_BAR);
@@ -41,16 +47,16 @@ class DashboardController extends AbstractDashboardController
             'labels' => ['My Stats'],
             'datasets' => [
                 [
-                    'label' =>'Skills',
+                    'label' => 'Skills',
                     'borderColor' => 'green',
                     'backgroundColor' => 'green',
-                    'data' =>  [$countSkills]
+                    'data' => [$countSkills],
                 ],
                 [
-                    'label' =>'Projects',
+                    'label' => 'Projects',
                     'borderColor' => 'blue',
                     'backgroundColor' => 'blue',
-                    'data' =>  [$countProjects]
+                    'data' => [$countProjects],
                 ],
             ],
         ]);

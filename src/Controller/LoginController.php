@@ -1,10 +1,15 @@
 <?php
+/*
+ * This class is part of a software application developed by Michael Ballester Granero.
+ *
+ * The application is distributed under the terms of the MIT License.
+ * For more information, please see the LICENSE file included in the source code.
+ */
 
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class LoginController extends AbstractController
