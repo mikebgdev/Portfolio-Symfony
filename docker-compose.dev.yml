@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+    symfony:
+        container_name: symfony-drone-dev
+        build: .
+        restart: unless-stopped
+        ports:
+            - "${HTTP_PORT}:80"
