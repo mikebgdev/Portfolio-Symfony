@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
     curl \
     vim \
     unzip \
+    nodejs \
+    npm \
     && rm -rf /var/lib/apt/lists/*
 
 # Configuramos los módulos de PHP
@@ -35,11 +37,8 @@ COPY --from=composer/composer:2-bin --link /composer /usr/bin/composer
 RUN composer install --prefer-dist --no-progress --no-interaction
 
 # Install nodejs npm
-RUN apt-get update && apt-get install \
-    nodejs \
-    npm
-
-RUN npm build
+RUN npm install
+RUN npm run build
 
 # Exponemos el puerto 80 para el tráfico HTTP
 EXPOSE 80
