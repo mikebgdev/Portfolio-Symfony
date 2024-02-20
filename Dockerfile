@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Configuramos los módulos de PHP
-RUN docker-php-ext-install pdo pdo_mysql intl \
+RUN docker-php-ext-install pdo pdo_mysql intl
 RUN docker-php-ext-install intl
 
 
