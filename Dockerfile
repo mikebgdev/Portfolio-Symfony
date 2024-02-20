@@ -35,7 +35,7 @@ COPY --from=composer/composer:2-bin --link /composer /usr/bin/composer
 RUN composer install --prefer-dist --no-progress --no-interaction
 
 # Install nodejs npm
-RUN apk update && apk add --no-cache \
+RUN apt-get update && apt-get install \
     nodejs \
     npm
 
