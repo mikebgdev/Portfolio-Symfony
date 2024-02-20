@@ -23,13 +23,13 @@ jobs:
     # uses: shivammathur/setup-php@v2
     - uses: shivammathur/setup-php@2cb9b829437ee246e9b3cac53555a39208ca6d28
       with:
-        php-version: '8.1'
-        
+        php-version: '8.2'
+
     - uses: actions/checkout@v3
-    
+
     - name: Copy .env.test.local
       run: php -r "file_exists('.env') || copy('.env.test', '.env');"
-      
+
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v3
@@ -38,12 +38,12 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
-          
+
     - name: Install Dependencies
       run: composer install --no-interaction
 
     - name: PHP Fixer
       run: vendor/bin/php-cs-fixer fix --verbose --diff --no-interaction
-    
+
     - name: Execute PHPUnit tests
       run: vendor/bin/phpunit tests
