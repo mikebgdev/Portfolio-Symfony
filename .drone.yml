@@ -28,7 +28,8 @@ steps:
         image: composer:latest
         commands:
             - cd ./$PROJECT_NAME
-            - APP_ENV=dev composer install --prefer-dist
+            - export APP_ENV=dev
+            - composer install --prefer-dist
         depends_on:
             - clone
 
@@ -146,7 +147,8 @@ steps:
         image: composer:latest
         commands:
             - cd ./$PROJECT_NAME
-            - APP_ENV=prod composer install --prefer-dist --no-dev
+            - export APP_ENV=prod
+            - composer install --prefer-dist --no-dev
         depends_on:
             - php-fixer
             - phpstan
@@ -159,7 +161,8 @@ steps:
         image: composer:latest
         commands:
             - cd ./$PROJECT_NAME
-            - APP_ENV=prod composer install --prefer-dist --no-dev
+            - export APP_ENV=prod
+            - composer install --prefer-dist --no-dev
         depends_on:
             - copy-paste-detector
             - phploc
