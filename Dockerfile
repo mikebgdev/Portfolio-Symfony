@@ -7,12 +7,12 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip \
     nodejs \
-		intl \
     npm \
+    libicu-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Configuramos los módulos de PHP
-RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-install pdo pdo_mysql intl
 
 # Habilita mod_rewrite
 RUN a2enmod rewrite
