@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
 # Configuramos los módulos de PHP
 RUN docker-php-ext-install pdo pdo_mysql intl
 RUN docker-php-ext-install intl
+RUN docker-php-ext-enable intl
 
 
 # Habilita mod_rewrite
