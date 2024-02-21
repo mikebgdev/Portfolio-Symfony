@@ -83,14 +83,13 @@ steps:
             - unit-tests
 
 
-    -   name: phpstan
+    -   name: phpcs
         group: coding-standards
         image: php:8.2
         commands:
-            - cd ./$PROJECT_NAME
-            - curl -L https://github.com/phpstan/phpstan/releases/download/1.0.0/phpstan.phar -o phpstan
-            - chmod +x phpstan
-            - ./phpstan analyse src tests
+            - git clone https://github.com/squizlabs/PHP_CodeSniffer.git /phpcs
+            - ln -s /phpcs/bin/phpcs /usr/local/bin/phpcs
+            - phpcs -wvp --standard=PSR2 ./src
         depends_on:
             - unit-tests
 
@@ -127,14 +126,14 @@ steps:
                 - pull_request
 
 
-    -   name: stand-analysis
+    -   name: phpstan
         group: quality-tools
         image: php:8.2
         commands:
             - cd ./$PROJECT_NAME
-            - curl -L https://github.com/phpmd/phpmd/releases/download/2.15.0/phpmd.phar -o phpmd
-            - chmod +x ./phpmd
-            - ./phpmd src text cleancode,codesize,controversial,design,naming,unusedcode
+            - curl -L https://github.com/phpstan/phpstan/releases/download/1.0.0/phpstan.phar -o phpstan
+            - chmod +x phpstan
+            - ./phpstan analyse src tests
         depends_on:
             - php-fixer
             - phpstan
