@@ -104,7 +104,7 @@ steps:
             - ./phpcpd src
         depends_on:
             - php-fixer
-            - phpstan
+            - phpcs
         when:
             event:
                 - pull_request
@@ -120,7 +120,7 @@ steps:
             - ./phploc src
         depends_on:
             - php-fixer
-            - phpstan
+            - phpcs
         when:
             event:
                 - pull_request
@@ -136,7 +136,7 @@ steps:
             - ./phpstan analyse src tests
         depends_on:
             - php-fixer
-            - phpstan
+            - phpcs
         when:
             event:
                 - pull_request
@@ -165,7 +165,7 @@ steps:
         depends_on:
             - copy-paste-detector
             - phploc
-            - stand-analysis
+            - phpstan
         when:
             event:
                 - pull_request
