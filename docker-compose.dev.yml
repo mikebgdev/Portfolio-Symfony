@@ -3,7 +3,7 @@ version: '3.8'
 services:
     nginx:
         image: nginx:1.25-alpine
-        container_name: nginx-portfolio-dev
+        container_name: nginx-${PROJECT_NAME}-dev
         restart: unless-stopped
         ports:
             - ${HTTP_PORT_DEV}:80
@@ -18,7 +18,7 @@ services:
 
 
     php:
-        container_name: php-portfolio-dev
+        container_name: php-${PROJECT_NAME}-dev
         build: .
         restart: unless-stopped
         volumes:
@@ -33,4 +33,4 @@ volumes:
 
 networks:
     symfony:
-        name: symfony-portfolio-dev
+        name: symfony-${PROJECT_NAME}-dev
