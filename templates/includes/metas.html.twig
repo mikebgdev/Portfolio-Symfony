@@ -16,13 +16,15 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url(app.current_route) }}">
-<meta property="og:image" content="{{ asset('build/images/logo_dark.png') }}">
+<meta property="og:image" content="{{ asset('build/images/logo_dark.jpg') }}">
 <meta property="og:type" content="website">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@mikebg_dev">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:image" content="{{ asset('build/images/logo_dark.png') }}">
+<meta name="twitter:image" content="{{ asset('build/images/logo_dark.jpg') }}">
 
 <link rel="icon" href="{{ asset('build/images/logo_icon.png') }}"/>
+<link rel="preload" as="image" href="{{ asset('/build/images/logo_dark.png') }}">
+<link rel="preload" as="image" href="{{ asset('build/images/hero-bg-1920x1080.jpg') }}">

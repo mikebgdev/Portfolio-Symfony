@@ -9,13 +9,38 @@ hero.h6: "Hola, soy"
 hero.h2: "Soy"
 hero.h2.items: "Software Developer, Web Developer"
 
-
 about.h2: "Acerca de mi"
+about.p1: "Soy un Desarrollador de Software con experiencia en desarrollo web, especializado tanto en Backend como
+          Frontend. Con una sólida experiencia en Symfony, PHP y MySQL, he entregado con éxito varios proyectos web, que
+          van desde páginas web estáticas hasta aplicaciones complejas que consumen API."
+about.p2: "Durante mi carrera, también adquirí experiencia en el desarrollo de aplicaciones móviles Android y trabajé en
+          un sistema ERP usando Delphi."
+about.p3: "Me apasiona el aprendizaje y el crecimiento continuo, y disfruto estar actualizado con las últimas tendencias
+          y tecnologías de programación. Siempre estoy buscando nuevas oportunidades para ampliar mis conocimientos y
+          mejorar mis habilidades."
+about.p4: "Si tiene alguna pregunta o desea saber más sobre mi trabajo, no dude en comunicarse conmigo. ¡Conectémonos y
+          exploremos las posibilidades de colaborar juntos!"
 about.contact: "Contáctame"
+about.me.name: "Nombre"
+about.me.age: "Edad"
+about.me.age.data: "años"
+about.me.email: "Correo electrónico"
+about.me.location: "Ubicación"
+about.me.nacionality: "Nacionalidad"
+about.me.nacionality.data: "Española"
+about.me.studies: "Estudios"
+about.me.studies.data: "Desarrollo de aplicaciones multiplataforma y web"
 
 skills.h2: "Habilidades Hard"
 
 skills.soft.h2: "Habilidades Soft"
+skills.soft.teamwork: "Trabajo en Equipo y Colaboración"
+skills.soft.adaptability: "Adaptabilidad y Aprendizaje Continuo"
+skills.soft.organization: "Organización y Responsabilidad"
+skills.soft.focus: "Enfoque en Calidad y Mejora Continua"
+skills.soft.decision: "Toma de Decisiones"
+skills.soft.problems: "Resolución de Problemas"
+skills.soft.results: "Orientación a Resultados"
 
 portfolio.h2: "Portfolio"
 
