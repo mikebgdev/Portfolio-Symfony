@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+    nginx:
+        image: nginx:1.25-alpine
+        container_name: nginx-${PROJECT_NAME}-dev
+        restart: unless-stopped
+        ports:
+            - ${HTTP_PORT_DEV}:80
+        volumes:
+            - ./nginx:/etc/nginx/conf.d/
+            - php_socket:/var/run/php
+            - php_source:/var/www/html
+        depends_on:
+            - php
+        networks:
+            - symfony
+
+
+    php:
+        container_name: php-${PROJECT_NAME}-dev
+        build: .
+        restart: unless-stopped
+        volumes:
+            - php_socket:/var/run/php
+            - php_source:/var/www/html
+        networks:
+            - symfony
+
+volumes:
+    php_socket:
+    php_source:
+
+networks:
+    symfony:
+        name: symfony-${PROJECT_NAME}-dev
