@@ -151,7 +151,7 @@ steps:
             - composer install --prefer-dist --no-dev
         depends_on:
             - php-fixer
-            - phpstan
+            - phpcs
         when:
             event:
                 - push
@@ -209,7 +209,7 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - docker compose up -d --build --q
+                - docker compose up -d --build
 
     -   name: deployment
         image: appleboy/drone-ssh
@@ -225,4 +225,4 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - docker compose -f docker-compose.dev.yml up -d --build --q
+                - docker compose -f docker-compose.dev.yml up -d --build
