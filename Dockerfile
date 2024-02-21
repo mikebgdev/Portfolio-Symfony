@@ -49,4 +49,6 @@ RUN composer install --prefer-dist --no-progress --no-interaction
 RUN npm install
 RUN npm run build
 
+RUN php bin/console cache:clear --env=prod
+
 CMD ["php-fpm"]
