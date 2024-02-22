@@ -8,7 +8,7 @@ services:
         ports:
             - ${HTTP_PORT_DEV}:80
         volumes:
-            - ./docker:/etc/docker/conf.d/
+            - ./docker/nginx:/etc/docker/conf.d/
             - php_socket:/var/run/php
             - .:/var/www/html
         depends_on:
