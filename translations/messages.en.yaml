@@ -6,7 +6,6 @@ header.contact: "Contact"
 header.switch: "Switch theme"
 
 hero.h6: "Hello, I am"
-hero.h2: "I am"
 hero.h2.items: "Software Developer, Web Developer"
 
 about.h2: "About Me"
@@ -37,6 +36,8 @@ skills.soft.problems: "Problem-Solving"
 skills.soft.results: "Orientation to results"
 
 portfolio.h2: "Portfolio"
+portfolio.project1.p: "My portfolio created with the Symfony framework"
+portfolio.project2.p: "Docker configuration for Symfony projects"
 
 contact.h2: "Contact"
 contact.form.name: 'Full Name'

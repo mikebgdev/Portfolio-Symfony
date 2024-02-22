@@ -6,14 +6,13 @@ header.contact: "Contacto"
 header.switch: "Cambiar tema"
 
 hero.h6: "Hola, soy"
-hero.h2: "Soy"
 hero.h2.items: "Software Developer, Web Developer"
 
 about.h2: "Acerca de mi"
 about.p1: "Soy un Desarrollador de Software con experiencia en desarrollo web, especializado tanto en Backend como
           Frontend. Con una sólida experiencia en Symfony, PHP y MySQL, he entregado con éxito varios proyectos web, que
           van desde páginas web estáticas hasta aplicaciones complejas que consumen API."
-about.p2: "Durante mi carrera, también adquirí experiencia en el desarrollo de aplicaciones móviles Android y trabajé en
+about.p2: "Durante mí carrera, también adquirí experiencia en el desarrollo de aplicaciones móviles Android y trabajé en
           un sistema ERP usando Delphi."
 about.p3: "Me apasiona el aprendizaje y el crecimiento continuo, y disfruto estar actualizado con las últimas tendencias
           y tecnologías de programación. Siempre estoy buscando nuevas oportunidades para ampliar mis conocimientos y
@@ -43,6 +42,8 @@ skills.soft.problems: "Resolución de Problemas"
 skills.soft.results: "Orientación a Resultados"
 
 portfolio.h2: "Portfolio"
+portfolio.porject1.p: "Mi portfolio creado con el framework Symfony"
+portfolio.porject2.p: "Configuracion docker para usar proyectos Symfony"
 
 contact.h2: "Contacto"
 contact.form.name: 'Nombre Completo'
