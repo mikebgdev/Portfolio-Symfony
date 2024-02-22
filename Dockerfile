@@ -38,7 +38,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
 
 COPY --from=composer/composer:2-bin --link /composer /usr/bin/composer
-
+ARG CACHEBUST=1
 COPY . /var/www/html/
 
 

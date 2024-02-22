@@ -19,7 +19,10 @@ services:
 
     php:
         container_name: php-${PROJECT_NAME}-dev
-        build: .
+        build:
+            context: .
+            args:
+                - CACHEBUST=${CACHEBUST:-1}
         restart: unless-stopped
         volumes:
             - php_socket:/var/run/php
