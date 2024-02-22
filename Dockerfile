@@ -36,20 +36,12 @@ RUN apk update && apk add --no-cache \
 # Instalar Composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
-
-ARG CACHEBUST
 COPY --from=composer/composer:2-bin --link /composer /usr/bin/composer
 
-COPY . /var/www/html/
+ARG CACHEBUST
 
+COPY --link docker/php/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
+RUN chmod +x /usr/local/bin/docker-entrypoint
 
-# Instalar dependencias de Composer
-RUN composer install --prefer-dist --no-progress --no-interaction
-
-# Install nodejs npm
-RUN npm install
-RUN npm run build
-
-RUN php bin/console cache:clear --env=prod
-
+ENTRYPOINT ["docker-entrypoint"]
 CMD ["php-fpm"]
