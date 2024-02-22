@@ -22,7 +22,7 @@ services:
         build:
             context: .
             args:
-                - CACHEBUST=${CACHEBUST:-1}
+                - CACHEBUST=$(date +%s)
         restart: unless-stopped
         volumes:
             - php_socket:/var/run/php
