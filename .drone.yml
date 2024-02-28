@@ -88,7 +88,7 @@ steps:
         image: php:8.2
         commands:
             - apt-get update && apt-get install -y git
-            - git clone https://github.com/squizlabs/PHP_CodeSniffer.git /phpcs
+            - git clone https://github.com/PHPCSStandards/PHP_CodeSniffer.git /phpcs
             - ln -s /phpcs/bin/phpcs /usr/local/bin/phpcs
             - phpcs -wvp --standard=PSR2 ./src
         depends_on:
