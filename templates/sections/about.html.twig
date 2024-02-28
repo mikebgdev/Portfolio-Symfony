@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row p-3">
       <div class="col-md-4">
-        <img src="/build/images/profile.jpeg" width="600px" height="600px" class="img-fluid rounded-circle mb-4" alt="Michael Ballester Granero">
+        <img loading="lazy" src="{{ asset("/build/images/profile.webp") }}" width="600px" height="600px" class="img-fluid rounded-circle mb-4" alt="Michael Ballester Granero">
       </div>
 
       <div class="col-md-8">
@@ -20,7 +20,7 @@
           <div class="col-md-6">
             <ul class="list-unstyled mb-4">
               <li><strong> {{ 'about.me.name'|trans }}: </strong>Michael</li>
-              <li><strong> {{ 'about.me.age'|trans }}: </strong>29 {{ 'about.me.age.data'|trans }}</li>
+              <li><strong> {{ 'about.me.age'|trans }}: </strong>29 {{ 'about.me.age_data'|trans }}</li>
               <li><strong> {{ 'about.me.email'|trans }}: </strong>mike@mikebgdev.com</li>
             </ul>
           </div>
@@ -28,8 +28,7 @@
           <div class="col-md-6">
             <ul class="list-unstyled mb-4">
               <li><strong> {{ 'about.me.location'|trans }}: </strong>Anna, Valencia</li>
-              <li><strong> {{ 'about.me.nacionality'|trans }}: </strong>{{ 'about.me.nacionality.data'|trans }}</li>
-              <li><strong> {{ 'about.me.studies'|trans }}: </strong>{{ 'about.me.studies.data'|trans }}</li>
+              <li><strong> {{ 'about.me.nationality'|trans }}: </strong>{{ 'about.me.nationality_data'|trans }}</li>
             </ul>
           </div>
         </div>
@@ -42,7 +41,16 @@
           {{ 'about.p4'|trans }}
         </p>
 
-        <a href="#contact" class="btn btn-primary btn-lg">{{ 'about.contact'|trans }}</a>
+        <a href="#contact" class="btn btn-primary btn-lg me-3">{{ 'about.contact'|trans }}</a>
+
+        <a href="{{ asset("/downloads/mi_cv.pdf") }}" target="_blank" class="btn btn-outline-primary btn-lg">
+          <span>
+            <svg width="16" height="16">
+              <use xlink:href="#download"></use>
+            </svg>
+          </span>
+          {{ "contact.cv"|trans }}
+        </a>
       </div>
     </div>
   </div>

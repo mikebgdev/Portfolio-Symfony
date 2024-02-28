@@ -75,7 +75,7 @@ steps:
         commands:
             - cd ./$PROJECT_NAME
             - curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer
-            - chmod +x php-cs-fixer
+            - chmod a+x php-cs-fixer
             - ./php-cs-fixer fix --dry-run --diff --stop-on-violation --config=.php-cs-fixer.dist.php
             - php -l src
             - php -l tests
@@ -88,7 +88,7 @@ steps:
         image: php:8.2
         commands:
             - apt-get update && apt-get install -y git
-            - git clone https://github.com/squizlabs/PHP_CodeSniffer.git /phpcs
+            - git clone https://github.com/PHPCSStandards/PHP_CodeSniffer.git /phpcs
             - ln -s /phpcs/bin/phpcs /usr/local/bin/phpcs
             - phpcs -wvp --standard=PSR2 ./src
         depends_on:
@@ -132,9 +132,7 @@ steps:
         image: php:8.2
         commands:
             - cd ./$PROJECT_NAME
-            - curl -L https://github.com/phpstan/phpstan/releases/download/1.0.0/phpstan.phar -o phpstan
-            - chmod +x phpstan
-            - ./phpstan analyse src tests
+            - vendor/bin/phpstan analyse src tests
         depends_on:
             - php-fixer
             - phpcs
@@ -210,7 +208,7 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - CACHEBUST=$(date +%s) docker compose up -d --build
+                - CACHEBUST=$(date +%s) docker compose build --no-cache
 
     -   name: deployment
         image: appleboy/drone-ssh
@@ -226,4 +224,4 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - CACHEBUST=$(date +%s) docker compose -f docker-compose.dev.yml up -d --build
+                - CACHEBUST=$(date +%s) docker compose -f docker-compose.dev.yml build --no-cache

@@ -1,38 +1,50 @@
-<section id="portfolio" class="portfolio bg-body-secondary">
+<section id="projects" class="projects bg-body-secondary">
   <div class="container">
     <div class="p-mb-5 pe-3 ps-3 pb-5 pt-5">
-      <h2 class="text-body-emphasis">{{ 'portfolio.h2'|trans }}</h2>
+      <h2 class="text-body-emphasis">{{ 'projects.h2'|trans }}</h2>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="/build/images/portfolio.png" width="100%" height="200px" alt="Portfolio Symfony">
+        <div class="col project-card">
+          <div class="card shadow-sm h-100">
+            <img loading="lazy" src="{{ asset("/build/images/portfolio.webp") }}" width="410px" height="230px" alt="Portfolio Symfony">
             <div class="card-body">
               <h3>Portfolio Symfony</h3>
               <p class="card-text">
-                {{ 'portfolio.project1.p'|trans }}
+                {{ 'projects.project1.p'|trans }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="icon-group">
-
                   <svg width="16" height="16">
                     <use xlink:href="#symfony"></use>
-                  </svg>
-                  <svg width="16" height="16">
-                    <use xlink:href="#bootstrap"></use>
-                  </svg>
-                  <svg width="16" height="16">
-                    <use xlink:href="#npm"></use>
                   </svg>
                   <svg width="16" height="16">
                     <use xlink:href="#php"></use>
                   </svg>
                   <svg width="16" height="16">
+                    <use xlink:href="#html"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#bootstrap"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#scss"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#npm"></use>
+                  </svg>
+                  <svg width="16" height="16">
                     <use xlink:href="#javascript"></use>
                   </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#docker"></use>
+                  </svg>
+                  <svg width="16" height="16">
+                    <use xlink:href="#drone"></use>
+                  </svg>
                 </div>
-
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
                 <div class="links-group">
                   <a href="https://github.com/mikebgdev/Portfolio-Symfony" class="btn btn-primary">
                     <svg width="20" height="20">
@@ -46,13 +58,13 @@
           </div>
         </div>
 
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="/build/images/docker.png" width="100%" height="200px" alt="Docker Symfony">
+        <div class="col project-card">
+          <div class="card shadow-sm h-100">
+            <img loading="lazy" src="{{ asset("/build/images/docker.webp") }}" width="410px" height="230px" alt="Docker Symfony">
             <div class="card-body">
               <h3>Docker Symfony</h3>
               <p class="card-text">
-                {{ 'portfolio.project2.p'|trans }}
+                {{ 'projects.project2.p'|trans }}
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="icon-group">
@@ -69,7 +81,8 @@
                     <use xlink:href="#docker"></use>
                   </svg>
                 </div>
-
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
                 <div class="links-group">
                   <a href="https://github.com/mikebgdev/symfony-docker" class="btn btn-primary">
                     <svg width="20" height="20">

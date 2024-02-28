@@ -1,44 +1,44 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap-utilities.min.css';
-
-import './styles/app.scss';
-
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import './styles/app.scss';
 import Typed from 'typed.js';
 
 
 (function () {
   let lightSwitch = document.getElementById("lightSwitch");
+  let prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
   if (lightSwitch) {
-    darkMode();
+    initializeTheme();
+
     lightSwitch.addEventListener("change", () => {
-      lightMode();
+      toggleTheme();
     });
 
-    function darkMode() {
-      let isSelected =
-        localStorage.getItem("lightSwitch") === null ||
-        localStorage.getItem("lightSwitch") === "dark";
-
-      if (isSelected) {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
-        lightSwitch.checked = true;
+    function initializeTheme() {
+      let storedTheme = localStorage.getItem("lightSwitch");
+      if (storedTheme === null) {
+        setTheme(prefersDarkMode ? 'dark' : 'light');
       } else {
-        document.documentElement.setAttribute('data-bs-theme', 'light');
-        lightSwitch.checked = false;
+        setTheme(storedTheme);
       }
     }
 
-    function lightMode() {
-      if (lightSwitch.checked) {
-        localStorage.setItem("lightSwitch", "dark");
-        darkMode();
-      } else {
-        document.documentElement.setAttribute('data-bs-theme', 'light');
-        localStorage.setItem("lightSwitch", "light");
-      }
+    function toggleTheme() {
+      let currentTheme = localStorage.getItem("lightSwitch");
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-bs-theme', theme);
+      localStorage.setItem("lightSwitch", theme);
+      lightSwitch.checked = theme === 'dark';
     }
   }
+
+
 
   const select = (el, all = false) => {
     el = el.trim()
@@ -97,4 +97,28 @@ import Typed from 'typed.js';
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+
+
+  const contactForm = document.forms.contact;
+  contactForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const response = await fetch("/contact", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    const modalResult = document.getElementById("modalResult");
+    modalResult.innerText = result.result;
+
+    const contactModal = new bootstrap.Modal(document.getElementById("contactModal"), {
+      backdrop: 'static',
+      keyboard: false
+    });
+    contactModal.show();
+
+  });
 })()
