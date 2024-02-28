@@ -4,82 +4,28 @@
       <h2 class="text-body-emphasis">{{ 'skills.soft.h2'|trans }}</h2>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#teamwork"></use>
-              </svg>
-              {{ 'skills.soft.teamwork'|trans }}
-            </h3>
-          </div>
-        </div>
+        {% set softSkills = [
+          {'icon': 'teamwork', 'label': 'skills.soft.teamwork'},
+          {'icon': 'adaptability', 'label': 'skills.soft.adaptability'},
+          {'icon': 'organization', 'label': 'skills.soft.organization'},
+          {'icon': 'focus', 'label': 'skills.soft.focus'},
+          {'icon': 'decision', 'label': 'skills.soft.decision'},
+          {'icon': 'problems', 'label': 'skills.soft.problems'},
+          {'icon': 'results', 'label': 'skills.soft.results'},
+        ] %}
 
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#adaptability"></use>
-              </svg>
-              {{ 'skills.soft.adaptability'|trans }}
-            </h3>
+        {% for skill in softSkills %}
+          <div class="col d-flex align-items-start">
+            <div>
+              <h3 class="fw-bold mb-0 fs-4">
+                <svg width="32" height="32">
+                  <use xlink:href="#{{ skill.icon }}"></use>
+                </svg>
+                {{ skill.label|trans }}
+              </h3>
+            </div>
           </div>
-        </div>
-
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#organization"></use>
-              </svg>
-              {{ 'skills.soft.organization'|trans }}
-            </h3>
-          </div>
-        </div>
-
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#focus"></use>
-              </svg>
-              {{ 'skills.soft.focus'|trans }}
-            </h3>
-          </div>
-        </div>
-
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#decision"></use>
-              </svg>
-              {{ 'skills.soft.decision'|trans }}
-            </h3>
-          </div>
-        </div>
-
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#problems"></use>
-              </svg>
-              {{ 'skills.soft.problems'|trans }}
-            </h3>
-          </div>
-        </div>
-
-        <div class="col d-flex align-items-start">
-          <div>
-            <h3 class="fw-bold mb-0 fs-4">
-              <svg width="32" height="32">
-                <use xlink:href="#results"></use>
-              </svg>
-              {{ 'skills.soft.results'|trans }}
-            </h3>
-          </div>
-        </div>
+        {% endfor %}
 
       </div>
     </div>

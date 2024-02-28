@@ -1,59 +1,121 @@
-header.home: "Inicio"
-header.about: "Sobre Mi"
-header.skills: "Habilidades"
-header.portfolio: "Portfolio"
-header.contact: "Contacto"
-header.switch: "Cambiar tema"
+# translations/messages.es.yaml
 
-hero.h6: "Hola, soy"
-hero.h2.items: "Software Developer, Web Developer"
+header:
+    home: "Inicio"
+    about: "Sobre Mí"
+    skills: "Habilidades"
+    portfolio: "Proyectos"
+    experience: "Experiencia"
+    education: "Educación"
+    contact: "Contacto"
+    switch: "Cambiar tema"
 
-about.h2: "Acerca de mi"
-about.p1: "Soy un Desarrollador de Software con experiencia en desarrollo web, especializado tanto en Backend como
-          Frontend. Con una sólida experiencia en Symfony, PHP y MySQL, he entregado con éxito varios proyectos web, que
-          van desde páginas web estáticas hasta aplicaciones complejas que consumen API."
-about.p2: "Durante mí carrera, también adquirí experiencia en el desarrollo de aplicaciones móviles Android y trabajé en
-          un sistema ERP usando Delphi."
-about.p3: "Me apasiona el aprendizaje y el crecimiento continuo, y disfruto estar actualizado con las últimas tendencias
-          y tecnologías de programación. Siempre estoy buscando nuevas oportunidades para ampliar mis conocimientos y
-          mejorar mis habilidades."
-about.p4: "Si tiene alguna pregunta o desea saber más sobre mi trabajo, no dude en comunicarse conmigo. ¡Conectémonos y
-          exploremos las posibilidades de colaborar juntos!"
-about.contact: "Contáctame"
-about.me.name: "Nombre"
-about.me.age: "Edad"
-about.me.age.data: "años"
-about.me.email: "Correo electrónico"
-about.me.location: "Ubicación"
-about.me.nacionality: "Nacionalidad"
-about.me.nacionality.data: "Española"
-about.me.studies: "Estudios"
-about.me.studies.data: "Desarrollo de aplicaciones multiplataforma y web"
+hero:
+    h6: "Hola, soy"
+    h2:
+        items: "Desarrollador de Software, Desarrollador Web"
 
-skills.h2: "Habilidades Hard"
+about:
+    h2: "Acerca de Mí"
+    p1: "Soy un Desarrollador de Software con experiencia en desarrollo web, especializado tanto en Backend como Frontend. Con una sólida experiencia en Symfony, PHP y MySQL, he entregado con éxito varios proyectos web, que van desde páginas web estáticas hasta aplicaciones complejas que consumen API."
+    p2: "Durante mi carrera, también adquirí experiencia en el desarrollo de aplicaciones móviles Android y trabajé en un sistema ERP usando Delphi."
+    p3: "Me apasiona el aprendizaje y el crecimiento continuo, y disfruto estar actualizado con las últimas tendencias y tecnologías de programación. Siempre estoy buscando nuevas oportunidades para ampliar mis conocimientos y mejorar mis habilidades."
+    p4: "Si tiene alguna pregunta o desea saber más sobre mi trabajo, no dude en comunicarse conmigo. ¡Conectémonos y exploremos las posibilidades de colaborar juntos!"
+    contact: "Contáctame"
+    me:
+        name: "Nombre"
+        age: "Edad"
+        age_data: "años"
+        email: "Correo electrónico"
+        location: "Ubicación"
+        nationality: "Nacionalidad"
+        nationality_data: "Española"
 
-skills.soft.h2: "Habilidades Soft"
-skills.soft.teamwork: "Trabajo en Equipo y Colaboración"
-skills.soft.adaptability: "Adaptabilidad y Aprendizaje Continuo"
-skills.soft.organization: "Organización y Responsabilidad"
-skills.soft.focus: "Enfoque en Calidad y Mejora Continua"
-skills.soft.decision: "Toma de Decisiones"
-skills.soft.problems: "Resolución de Problemas"
-skills.soft.results: "Orientación a Resultados"
+skills:
+    h2: "Habilidades Técnicas"
+    web:
+        h3: "Desarrollo Web"
+    server:
+        h3: "Infraestructura y Servidores"
+    service:
+        h3: "Herramientas y Servicios"
+    learn:
+        h3: "En aprendizaje"
 
-portfolio.h2: "Portfolio"
-portfolio.porject1.p: "Mi portfolio creado con el framework Symfony"
-portfolio.porject2.p: "Configuracion docker para usar proyectos Symfony"
+    soft:
+        h2: "Habilidades Interpersonales"
+        teamwork: "Trabajo en Equipo y Colaboración"
+        adaptability: "Adaptabilidad y Aprendizaje Continuo"
+        organization: "Organización y Responsabilidad"
+        focus: "Enfoque en Calidad y Mejora Continua"
+        decision: "Toma de Decisiones"
+        problems: "Resolución de Problemas"
+        results: "Orientación a Resultados"
 
-contact.h2: "Contacto"
-contact.form.name: 'Nombre Completo'
-contact.form.email: 'Correo electrónico'
-contact.form.subject: 'Asunto'
-contact.form.message: 'Mensaje'
-contact.form.send: 'Enviar mensaje'
-contact.social: 'Redes sociales'
+projects:
+    h2: "Proyectos"
+    project1:
+        p: "Mi portfolio creado con el framework Symfony"
+    project2:
+        p: "Configuración de Docker para usar proyectos Symfony"
 
-footer.copyrights: "Todos los derechos reservados."
-footer.designed: "Diseñado y desarrollado por"
+experience:
+    title: "Experiencia Laboral"
+    date_1: "Febrero 2022 - Presente"
+    job_title_1: "Desarrollador de Software Symfony"
+    job_description_1: "Desarrollo de aplicaciones web y microservicios con Symfony. Análisis y migración de proyectos. Integración de API REST, pruebas unitarias y colaboración en optimización de rendimiento."
+    company_1: "Arold Solutions"
+    location_1: "Madrid"
+
+    date_2: "Enero 2017 - Febrero 2022"
+    job_title_2: "Desarrollador de Software Symfony"
+    job_description_2: "Desarrollo de aplicaciones de escritorio con Pascal/Delphi, web con Symfony/Bootstrap/jQuery, y móviles en Android. Creación y consumo de API REST, gestión de bases de datos, despliegue con Docker y control de proyectos con GitLab. Responsable de seguridad, administración de servidores y liderazgo en proyectos ágiles."
+    company_2: "Ginsa Informática S.A."
+    location_2: "Valencia"
+
+education:
+    title: "Educación"
+    date_1: "Octubre 2023 - Presente"
+    course_1: "Curso de Especialización en Inteligencia Artificial y Big Data"
+    institution_1: "IES Dr Lluis Simarro"
+
+    date_2: "Septiembre 2023 - Presente"
+    degree_2: "Ingeniero Informático"
+    institution_2: "Universidad Oberta de Cataluña"
+
+    date_3: "Septiembre 2017 - Junio 2021"
+    degree_3: "Ingeniero Informático"
+    institution_3: "Universidad Nacional de Educación a Distancia - U.N.E.D."
+
+    date_4: "Septiembre 2017 - Junio 2019"
+    degree_4: "Técnico Superior Desarrollo de Aplicaciones Web"
+    institution_4: "IES Abastos"
+
+    date_5: "Septiembre 2014 - Junio 2017"
+    degree_5: "Técnico Superior Desarrollo de Aplicaciones Multiplataforma"
+    institution_5: "IES Dr Lluis Simarro"
+
+contact:
+    h2: "Contacto"
+    form:
+        name: "Nombre Completo"
+        email: "Correo electrónico"
+        subject: "Asunto"
+        message: "Mensaje"
+        send: "Enviar mensaje"
+    social: "Redes sociales"
+    cv: "Descargar CV"
+
+    modal:
+        h5: "Resultado del Envío"
+        close: "Cerrar"
+
+footer:
+    copyrights: "Todos los derechos reservados."
+    designed: "Diseñado y desarrollado por"
 
 uparrow: "Volver arriba"
+
+email:
+    sent_successfully: '¡Correo enviado con éxito!'
+    send_error: 'Error al enviar el correo. Por favor, inténtalo de nuevo.'

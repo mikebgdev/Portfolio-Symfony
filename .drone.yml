@@ -74,7 +74,7 @@ steps:
         image: php:8.2
         commands:
             - cd ./$PROJECT_NAME
-            - curl -L https://cs.symfony.com/download/php-cs-fixer-v3.phar -o php-cs-fixer
+            - curl -L https://cs.symfony.com/downloads/php-cs-fixer-v3.phar -o php-cs-fixer
             - chmod +x php-cs-fixer
             - ./php-cs-fixer fix --dry-run --diff --stop-on-violation --config=.php-cs-fixer.dist.php
             - php -l src
@@ -132,7 +132,7 @@ steps:
         image: php:8.2
         commands:
             - cd ./$PROJECT_NAME
-            - curl -L https://github.com/phpstan/phpstan/releases/download/1.0.0/phpstan.phar -o phpstan
+            - curl -L https://github.com/phpstan/phpstan/releases/downloads/1.0.0/phpstan.phar -o phpstan
             - chmod +x phpstan
             - ./phpstan analyse src tests
         depends_on:
