@@ -174,7 +174,6 @@ html {
       height: auto;
     }
 
-
     .project-card {
       height: 100%;
       padding: 0;
@@ -196,6 +195,32 @@ html {
           transform: scale(1.05);
         }
       }
+    }
+  }
+
+  #experience{
+    .dates{
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      font-size: 1rem;
+    }
+
+    h3{
+      font-size: 1.25rem;
+    }
+  }
+
+  #education {
+    .dates{
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--bs-heading-color);
+      font-size: 1rem;
+    }
+
+    h3{
+      font-size: 1.25rem;
     }
   }
 
