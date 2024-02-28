@@ -210,7 +210,7 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - CACHEBUST=$(date +%s) docker compose up -d --build
+                - CACHEBUST=$(date +%s) docker compose build --no-cache
 
     -   name: deployment
         image: appleboy/drone-ssh
@@ -226,4 +226,4 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - CACHEBUST=$(date +%s) docker compose -f docker-compose.dev.yml up -d --build
+                - CACHEBUST=$(date +%s) docker compose -f docker-compose.dev.yml build --no-cache

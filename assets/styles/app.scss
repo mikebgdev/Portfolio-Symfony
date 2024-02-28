@@ -12,6 +12,12 @@ $background-color_1: #0d6efd;
       margin-left: 5px;
     }
   }
+
+  footer {
+    a {
+      color: white;
+    }
+  }
 }
 
 [data-bs-theme="light"] {
@@ -19,6 +25,13 @@ $background-color_1: #0d6efd;
     &:before {
       content: url("../svg/sun.svg");
       margin-left: 25px;
+    }
+  }
+
+
+  footer {
+    a {
+      color: black;
     }
   }
 }
@@ -183,12 +196,6 @@ html {
           transform: scale(1.05);
         }
       }
-    }
-  }
-
-  footer {
-    a {
-      text-decoration: none;
     }
   }
 
