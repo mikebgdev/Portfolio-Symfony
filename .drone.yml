@@ -132,9 +132,7 @@ steps:
         image: php:8.2
         commands:
             - cd ./$PROJECT_NAME
-            - curl -L https://github.com/phpstan/phpstan/releases/downloads/1.0.0/phpstan.phar -o phpstan
-            - chmod +x phpstan
-            - ./phpstan analyse src tests
+            - vendor/bin/phpstan analyse src tests
         depends_on:
             - php-fixer
             - phpcs
