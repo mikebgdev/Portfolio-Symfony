@@ -40,8 +40,8 @@ COPY --from=composer/composer:2-bin --link /composer /usr/bin/composer
 
 ARG CACHEBUST
 
-COPY --link docker-entrypoint.sh /usr/local/bin/docker-entrypoint
-RUN chmod +x /usr/local/bin/docker-entrypoint
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-ENTRYPOINT ["docker-entrypoint"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["php-fpm"]
