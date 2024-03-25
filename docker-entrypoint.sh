@@ -2,7 +2,6 @@
 set -e
 
 echo "Ejecutando el script docker-entrypoint.sh..."
-echo "LS:"
 ls -l
 
 if [ "${1#-}" != "$1" ]; then
