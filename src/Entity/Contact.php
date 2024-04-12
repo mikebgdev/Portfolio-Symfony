@@ -29,6 +29,20 @@ class Contact
     public string $message;
 
     /**
+     * @param string $name
+     * @param string $email
+     * @param string $subject
+     * @param string $message
+     */
+    public function __construct(string $name, string $email, string $subject, string $message)
+    {
+        $this->name = $name;
+        $this->email = $email;
+        $this->subject = $subject;
+        $this->message = $message;
+    }
+
+    /**
      * @return string
      */
     public function getName(): string
