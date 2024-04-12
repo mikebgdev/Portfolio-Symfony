@@ -58,6 +58,8 @@ projects:
         p: "My portfolio created with the Symfony framework"
     project2:
         p: "Docker configuration for Symfony projects"
+    project3:
+        p: "Application to predict salaries with AI"
 
 experience:
     title: "Work Experience"

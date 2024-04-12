@@ -176,8 +176,7 @@ html {
 
     .project-card {
       height: 100%;
-      padding: 0;
-      margin: calc(var(--bs-gutter-x)* .5);
+      padding: calc(var(--bs-gutter-x)* .5);
       overflow: hidden;
 
       .shadow-sm {

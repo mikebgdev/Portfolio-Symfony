@@ -8,15 +8,3 @@ index:
 contact:
     path: /contact
     controller: App\Controller\ContactController::contact
-
-dashboard:
-    path: /admin
-    controller: App\Controller\Admin\DashboardController::index
-
-app_login:
-    path: /login
-    controller: App\Controller\LoginController::index
-
-app_logout:
-    path: /logout
-    methods: GET
