@@ -24,7 +24,7 @@ class ContactTest extends TestCase
     public function testValidContact(): void
     {
         $validator = Validation::createValidatorBuilder()
-            ->enableAnnotationMapping()
+            ->enableAttributeMapping()
             ->getValidator();
 
         $contact = new Contact(
