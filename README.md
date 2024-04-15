@@ -10,6 +10,8 @@ This Symfony project serves as my personal portfolio showcasing my skills, proje
 - **Home Page:** Brief introduction and overview of my skills.
 - **Projects:** Showcase of selected projects with detailed descriptions.
 - **Skills:** Comprehensive list of my technical skills (Hard Skills) and personal attributes (Soft Skills).
+- **Education:** Details about your educational background, including institutions attended, degrees earned, and relevant dates.
+- **Experience:** Detailed information about your work experience, including companies worked for, positions held, and employment periods.
 - **Contact:** Contact form for inquiries and collaborations.
 
 ## Technologies Used

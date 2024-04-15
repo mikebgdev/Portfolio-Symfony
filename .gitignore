@@ -1,9 +1,13 @@
+## IntellJ
 .idea
+
+## PhpUnit Coverage
+/build
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
-/build
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
