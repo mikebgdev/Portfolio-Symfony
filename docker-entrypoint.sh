@@ -10,10 +10,11 @@ fi
 if [ -f composer.json ]; then
 	echo "Ejecutando comandos..."
 
+	composer install --prefer-dist --no-progress --no-interaction
+
 	chmod -R 775 public
 	chmod -R 775 var/cache/
 
-	composer install --prefer-dist --no-progress --no-interaction
 	npm install
 	npm run build
 	php bin/console cache:clear --env=prod
