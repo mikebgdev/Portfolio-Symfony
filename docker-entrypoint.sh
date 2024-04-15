@@ -11,7 +11,6 @@ if [ -f composer.json ]; then
 	echo "Ejecutando comandos..."
 
 	chmod -R 775 public
-	mkdir var/cache/
 	chmod -R 775 var/cache/
 
 	composer install --prefer-dist --no-progress --no-interaction
