@@ -11,7 +11,6 @@ Encore
     .setPublicPath('/build')
 
     .addEntry('app', './assets/app.js')
-    .enableStimulusBridge('./assets/controllers.json')
 
     .splitEntryChunks()
 

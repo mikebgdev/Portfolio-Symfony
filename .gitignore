@@ -1,4 +1,9 @@
+## IntellJ
 .idea
+
+## PhpUnit Coverage
+/build
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php

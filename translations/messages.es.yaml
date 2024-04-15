@@ -58,6 +58,10 @@ projects:
         p: "Mi portfolio creado con el framework Symfony"
     project2:
         p: "Configuración de Docker para usar proyectos Symfony"
+    project3:
+        p: "Aplicación para predecir salarios con IA"
+    project4:
+        p: "Aplicación para detectar perros o gatos con IA y TensorBoard"
 
 experience:
     title: "Experiencia Laboral"

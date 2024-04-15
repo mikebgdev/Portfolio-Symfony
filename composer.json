@@ -1,22 +1,17 @@
 {
+    "name": "mikebgdev/portfolio-symfony",
+    "description": "Personal portfolio site made with Symfony",
     "type": "project",
     "license": "proprietary",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/annotations": "^2.0",
-        "doctrine/doctrine-bundle": "^2.11",
-        "doctrine/doctrine-migrations-bundle": "^3.3",
-        "doctrine/orm": "^2.18",
-        "easycorp/easyadmin-bundle": "^4.9",
         "phpdocumentor/reflection-docblock": "^5.3",
-        "sensio/framework-extra-bundle": "^6.2",
         "symfony/asset": "6.4.*",
         "symfony/console": "6.4.*",
-        "symfony/doctrine-messenger": "6.4.*",
         "symfony/dotenv": "6.4.*",
         "symfony/expression-language": "6.4.*",
         "symfony/flex": "^2.4",
@@ -33,14 +28,10 @@
         "symfony/property-access": "6.4.*",
         "symfony/property-info": "6.4.*",
         "symfony/runtime": "6.4.*",
-        "symfony/security-bundle": "6.4.*",
         "symfony/serializer": "6.4.*",
         "symfony/string": "6.4.*",
         "symfony/translation": "6.4.*",
         "symfony/twig-bundle": "6.4.*",
-        "symfony/ux-chartjs": "^2.15",
-        "symfony/ux-lazy-image": "^2.15",
-        "symfony/ux-typed": "^2.15",
         "symfony/validator": "6.4.*",
         "symfony/web-link": "6.4.*",
         "symfony/webpack-encore-bundle": "^2.1",
@@ -48,10 +39,29 @@
         "twig/extra-bundle": "^3.8",
         "twig/twig": "^3.8"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.50",
+        "phpunit/phpunit": "^9.6",
+        "rector/rector": "^1.0",
+        "roave/security-advisories": "dev-latest",
+        "symfony/browser-kit": "6.4.*",
+        "symfony/css-selector": "6.4.*",
+        "symfony/debug-bundle": "6.4.*",
+        "symfony/maker-bundle": "^1.55",
+        "symfony/phpunit-bridge": "^6.4",
+        "symfony/stopwatch": "6.4.*",
+        "symfony/web-profiler-bundle": "6.4.*"
+    },
     "config": {
         "allow-plugins": {
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "composer/package-versions-deprecated": true,
+            "php-http/discovery": false
+        },
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
         },
         "sort-packages": true
     },
@@ -94,18 +104,5 @@
             "allow-contrib": false,
             "require": "6.4.*"
         }
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.50",
-        "phpunit/phpunit": "^9.6",
-        "rector/rector": "^1.0",
-        "roave/security-advisories": "dev-latest",
-        "symfony/browser-kit": "6.4.*",
-        "symfony/css-selector": "6.4.*",
-        "symfony/debug-bundle": "6.4.*",
-        "symfony/maker-bundle": "^1.55",
-        "symfony/phpunit-bridge": "^6.4",
-        "symfony/stopwatch": "6.4.*",
-        "symfony/web-profiler-bundle": "6.4.*"
     }
 }

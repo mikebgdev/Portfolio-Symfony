@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 [Michael Ballester Granero](https://github.com/mikebgdev)
+Copyright (c) 2024 [Michael Ballester Granero](https://github.com/mikebgdev)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
