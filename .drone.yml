@@ -180,6 +180,31 @@ trigger:
         - promote
 
 steps:
+    -   name: clear_target_directory
+        image: appleboy/drone-ssh
+        settings:
+            host:
+                from_secret: docker_host
+            username:
+                from_secret: username_ssh
+            password:
+                from_secret: password_ssh
+            script:
+                - find /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO} -maxdepth 1 -type f ! -name '.env' -exec rm -f {} +
+
+    -   name: scp_files
+        image: appleboy/drone-scp
+        settings:
+            host:
+                from_secret: docker_host
+            username:
+                from_secret: username_ssh
+            password:
+                from_secret: password_ssh
+            port: 22
+            target: /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
+            source: .
+
     -   name: production
         image: appleboy/drone-ssh
         when:
@@ -196,8 +221,6 @@ steps:
             command_timeout: 2m
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - git fetch
-                - git checkout $DRONE_COMMIT
                 - CACHEBUST=$(date +%s) docker compose up -d --build
 
     -   name: deployment
@@ -214,6 +237,4 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - git fetch
-                - git checkout $DRONE_COMMIT
                 - CACHEBUST=$(date +%s) docker compose -f docker-compose.dev.yml up -d --build
