@@ -196,7 +196,7 @@ steps:
             command_timeout: 2m
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - git pull
+                - git fetch
                 - git checkout $DRONE_COMMIT
                 - CACHEBUST=$(date +%s) docker compose up -d --build
 
@@ -214,6 +214,6 @@ steps:
                 from_secret: password_ssh
             script:
                 - cd /var/www/${DRONE_REPO_NAME}-${DRONE_DEPLOY_TO}
-                - git pull
+                - git fetch
                 - git checkout $DRONE_COMMIT
                 - CACHEBUST=$(date +%s) docker compose -f docker-compose.dev.yml up -d --build
