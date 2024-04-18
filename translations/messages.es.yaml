@@ -13,7 +13,9 @@ header:
 hero:
     h6: "Hola, soy"
     h2:
-        items: "Desarrollador de Software, Desarrollador Web"
+        items:
+            1: "Desarrollador de Software"
+            2: "Desarrollador Web"
 
 about:
     h2: "Acerca de mí"
