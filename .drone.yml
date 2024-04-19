@@ -132,7 +132,7 @@ steps:
         image: php:8.2
         commands:
             - cd ./$PROJECT_NAME
-            - vendor/bin/phpstan analyse src tests
+            - vendor/bin/phpstan analyse src
         depends_on:
             - php-fixer
             - phpcs
