@@ -14,11 +14,7 @@ use App\Entity\Contact;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Validator\Validation;
 
-/**
- * @internal
- *
- * @covers \App\Entity\Contact
- */
+#[covers(Contact::class)]
 class ContactTest extends TestCase
 {
     public function testValidContact(): void

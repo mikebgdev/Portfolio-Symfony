@@ -3,6 +3,7 @@
 
 ## PhpUnit Coverage
 /build
+.phpunit.cache
 
 ###> symfony/framework-bundle ###
 /.env.local

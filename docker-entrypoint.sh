@@ -12,8 +12,8 @@ if [ -f composer.json ]; then
 
 	composer install --prefer-dist --no-progress --no-interaction
 
-	chmod -R 775 public
-	chmod -R 775 var/cache/
+	chmod -R 777 public
+	chmod -R 777 var/cache/
 
 	npm install
 	npm run build

@@ -2,6 +2,20 @@
   <div class="hero-container" data-aos="fade-in">
     <div>{{ 'hero.h6'|trans }}</div>
     <h1>Michael Ballester Granero</h1>
-    <h2><span class="typed" data-typed-items="{{ 'hero.h2.items'|trans }}"></span></h2>
+    <h2>
+      {% set strings = [
+        'hero.h2.items.1'|trans,
+        'hero.h2.items.2'|trans
+      ] %}
+      <span {{ stimulus_controller('symfony/ux-typed', {
+        strings: strings,
+        smartBackspace: false,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true
+      }) }}></span>
+    </h2>
   </div>
 </section>

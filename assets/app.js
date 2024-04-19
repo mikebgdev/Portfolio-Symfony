@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap-utilities.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/app.scss';
-import Typed from 'typed.js';
 
 
 (function () {
@@ -38,8 +37,6 @@ import Typed from 'typed.js';
     }
   }
 
-
-
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -47,19 +44,6 @@ import Typed from 'typed.js';
     } else {
       return document.querySelector(el)
     }
-  }
-
-  const typed = select('.typed');
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
   }
 
   const onscroll = (el, listener) => {
