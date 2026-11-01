@@ -13,7 +13,7 @@ concurrency:
 jobs:
   secrets:
     name: Secrets
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -23,7 +23,7 @@ jobs:
       - run: bash ci/check_secrets.sh
   verify:
     name: Verify
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 60
     env:
       CI: "true"

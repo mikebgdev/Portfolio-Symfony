@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This class is part of a software application developed by Michael Ballester Granero.
  *
