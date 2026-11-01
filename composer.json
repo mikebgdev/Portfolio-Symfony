@@ -2,7 +2,7 @@
     "name": "mikebgdev/portfolio-symfony",
     "description": "Personal portfolio site made with Symfony",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
