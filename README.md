@@ -88,8 +88,12 @@ For inquiries and collaborations, feel free to reach out to me through the conta
 
  La existencia del archivo de workflow no acredita que el runner esté disponible ni que la revisión haya pasado. Antes de integrar, comprobar los resultados **Secrets** y **Verify** del mismo SHA. Este workflow no despliega servicios. Conservar el procedimiento de entrega y rollback específico del proyecto.
 
- La [recomendación de licencia](docs/LICENSING.md) distingue código propio y materiales de terceros. No se ha aplicado una licencia nueva ni cambiado la visibilidad del repositorio.
 
 La instalación npm utiliza `.npmrc` con `install-links=true` para empaquetar el componente Symfony UX local desde `vendor/`, sin incorporar sus dependencias internas de desarrollo. Ejecutar `composer install` antes de `npm ci`. El frontend requiere Node 22.23.4. El control npm bloquea vulnerabilidades altas o críticas; los avisos moderados también deben revisarse.
 
 El tooling usa Encore 7 y Babel 8. Los polyfills usan el plugin recomendado para Babel 8. La dependencia uuid de node-notifier se fija en 11.1.1: el adaptador utiliza únicamente la función pública v4(), conservada en esa versión, para nombrar sus pipes de notificación.
+
+<!-- license-adopted-20261101 -->
+## Licencia
+
+**MIT**, con el alcance indicado en [docs/LICENSING.md](docs/LICENSING.md). El texto completo está en [LICENSE.md](LICENSE.md). La concesión cubre las aportaciones propias; los recursos y componentes de terceros conservan sus licencias y atribuciones.
