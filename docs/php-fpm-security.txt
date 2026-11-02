@@ -1,0 +1,9 @@
+PHP-FPM session mitigation — 2026-11-02
+
+Nixpacks supplies /assets/php-fpm.conf as a static asset and starts PHP-FPM with that pool. The existing install-production.sh now applies configure-php-fpm-security.cjs to that actual file, preserving its listener, process settings and unrelated PHP settings. The helper requires the reviewed global/www layout, replaces conflicting upload-progress directives with an administrative off flag, and is idempotent. A changed or additional pool fails the build for review.
+
+The Docker artifact also loads config/php/security.ini from PHP conf.d. No CLI-only ini or immutable /nix/store path is used as a substitute for the web pool.
+
+Run npm run test:security for the five pool/persistence contracts. The CLI helper was also tested with the official Nixpacks php-fpm.conf static asset. Production delivery must still verify php-fpm -t and the effective FPM value; source validation alone does not demonstrate the new deployed artifact. The existing runtime mitigation applied by operations remains active until delivery.
+
+The frontend dependency upgrade, MIT licensing and quality workflow already integrated in PR10 are preserved unchanged. A new artifact must not re-enable session upload progress. This is a preventive mitigation for CVE-2026-115560; the vulnerable serializer transition and remote code execution were not demonstrated on this application.
