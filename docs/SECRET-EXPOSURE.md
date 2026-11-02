@@ -29,3 +29,9 @@ commit, archivo, regla y línea. Es un secreto histórico retirado, no un falso
 positivo. El historial compartido no se reescribe. Una reintroducción en otro
 commit tiene otro fingerprint y debe bloquear la CI. No añadir excepciones
 generales por ruta, variable o patrón.
+
+El identificador público de Cloudflare Web Analytics se exceptúa por su valor
+exacto, la regla generic-api-key y el archivo de la plantilla, combinados con
+AND. No es una credencial de API. Una clave distinta en la misma plantilla o
+el mismo valor en otro archivo sigue detectándose; ambos controles se han
+ejecutado con Gitleaks 8.30.1.

@@ -8,3 +8,11 @@ paths = [
   '''(^|/)\.venv/''',
   '''(^|/)\.git/''',
 ]
+
+[[allowlists]]
+description = "Reviewed public Cloudflare Web Analytics identifier in browser markup"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "secret"
+regexes = ['''^368730df875e4a898313bc7231c2d1cd$''']
+paths = ['''(^|/)templates/base\.html\.twig$''']
