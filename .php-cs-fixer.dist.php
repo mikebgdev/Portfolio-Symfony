@@ -9,10 +9,12 @@
 return (new PhpCsFixer\Config())
     ->setUsingCache(false)
     ->setRules([
-        '@PHP74Migration' => true,
+        '@PHP7x4Migration' => true,
         '@PhpCsFixer' => true,
         '@Symfony' => true,
         '@Symfony:risky' => true,
+        // Keep the existing strict_types declarations without changing runtime semantics.
+        'declare_strict_types' => false,
         'strict_comparison' => true,
         'array_syntax' => ['syntax' => 'short'],
         'list_syntax' => ['syntax' => 'short'],

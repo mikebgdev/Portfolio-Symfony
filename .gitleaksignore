@@ -1,0 +1,8 @@
+# Excepciones de falsos positivos revisadas el 2026-11-01.
+# Cada excepción está ligada al commit, archivo, regla y línea originales.
+# Identificador público de Cloudflare Web Analytics incluido en el HTML del navegador.
+11d6b4107e6dc10930b0ae743420f76c36b1a5be:templates/base.html.twig:generic-api-key:53
+
+# Secreto histórico retirado: APP_SECRET sustituido y verificado en ambos runtimes
+# el 2026-11-02; ver docs/SECRET-EXPOSURE.md. No es un falso positivo.
+71b4cdf48104d0abf4d7ca0aaefd0cc8159cf2c3:.env:generic-api-key:19
