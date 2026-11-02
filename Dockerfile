@@ -2,6 +2,8 @@ FROM php:8.2-fpm-alpine
 
 WORKDIR /var/www/html
 
+COPY config/php/security.ini /usr/local/etc/php/conf.d/zz-security.ini
+
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
 COPY --from=mlocati/php-extension-installer:latest --link /usr/bin/install-php-extensions /usr/local/bin/
 

@@ -10,5 +10,6 @@ python3 ci/check_repository.py
 composer validate --no-check-publish
 vendor/bin/php-cs-fixer fix --dry-run --diff
 vendor/bin/phpunit
+npm run test:security
 npm audit --audit-level=high
 npm run build
